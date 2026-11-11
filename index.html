@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~*~ Welcome 2 gabss555 World ~*~</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Retro Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================
+           Y2K PINK THEME STYLES - GABSS555 PORTFOLIO
+           ========================================== */
+        :root {
+            --pink-main: #ff1493;
+            --pink-light: #ff69b4;
+            --pink-pastel: #ffb6c1;
+            --pink-soft: #ffe4e1;
+            --pink-dark: #c71585;
+            --purple-y2k: #8a2be2;
+            --cyan-y2k: #00ffff;
+            --yellow-y2k: #ffff00;
+            --silver-bg: #f4e8f0;
+            --win-bg: #ffc0cb;
+            --win-border-light: #ffffff;
+            --win-border-dark: #8b008b;
+            --text-dark: #4a0033;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            background-color: #ffdae9;
+            background-image: 
+                radial-gradient(var(--pink-light) 15%, transparent 16%),
+                radial-gradient(var(--purple-y2k) 15%, transparent 16%);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            min-height: 100vh;
+            padding-bottom: 70px;
+            overflow-x: hidden;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23ff1493" stroke="%23ffffff" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'), auto;
+        }
+
+        /* Y2K Marquee Header Banner */
+        .top-banner {
+            background: linear-gradient(90deg, #ff007f, #ff66cc, #9933ff, #ff007f);
+            background-size: 300% 300%;
+            animation: gradientBG 4s ease infinite;
+            color: #fff;
+            padding: 6px 0;
+            font-family: 'VT323', monospace;
+            font-size: 1.3rem;
+            border-bottom: 3px ridge #ffb6c1;
+            box-shadow: 0 2px 10px rgba(255, 20, 147, 0.4);
+            letter-spacing: 1px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container Layout */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 850px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Retro Window Styling (Windows 2000 / Y2K style) */
+        .y2k-window {
+            background: #ffeaf2;
+            border: 3px outset #ffa6c9;
+            box-shadow: 6px 6px 0px rgba(139, 0, 139, 0.3), 10px 10px 20px rgba(0,0,0,0.15);
+            border-radius: 8px 8px 4px 4px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .window-titlebar {
+            background: linear-gradient(90deg, #ff1493, #ff69b4, #da70d6);
+            padding: 6px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px #8b008b;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 4px;
+        }
+
+        .win-btn {
+            width: 18px;
+            height: 18px;
+            background: #ffc0cb;
+            border: 2px outset #ffffff;
+            font-size: 10px;
+            font-weight: bold;
+            color: #8b008b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 1px 1px 0 #000;
+        }
+
+        .win-btn:active {
+            border-style: inset;
+        }
+
+        .window-body {
+            padding: 18px;
+        }
+
+        /* Sidebar Profile */
+        .profile-card {
+            text-align: center;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 15px;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid #ff1493;
+            object-fit: cover;
+            box-shadow: 0 0 15px #ff69b4;
+            background: #ffb6c1;
+        }
+
+        .avatar-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #00ffff;
+            color: #000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 8px;
+            padding: 4px 6px;
+            border-radius: 10px;
+            border: 2px solid #ff1493;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .username {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.1rem;
+            color: #ff1493;
+            text-shadow: 2px 2px 0px #ffff00;
+            margin-bottom: 8px;
+            word-break: break-word;
+        }
+
+        .bio-tag {
+            background: #ffffff;
+            border: 2px dashed #ff69b4;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: #6a0d45;
+        }
+
+        .stats-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .stat-item {
+            background: #ffb6c1;
+            border: 2px inset #ffffff;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .stat-item i {
+            color: #c71585;
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 3px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .btn-y2k {
+            background: linear-gradient(180deg, #ffb6c1 0%, #ff1493 100%);
+            border: 2px outset #ffffff;
+            color: white;
+            padding: 10px 14px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+            text-shadow: 1px 1px 1px #8b008b;
+            cursor: pointer;
+        }
+
+        .btn-y2k:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 12px #ff1493;
+            background: linear-gradient(180deg, #ff69b4 0%, #c71585 100%);
+        }
+
+        /* Glitch & Y2K Main Header */
+        .main-header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .glitch-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.8rem;
+            color: #ff1493;
+            text-shadow: 3px 3px 0px #00ffff, -3px -3px 0px #ffff00;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        /* Filter Badges */
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            background: #ffffff;
+            border: 2px solid #ff69b4;
+            color: #c71585;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: #ff1493;
+            color: #fff;
+            border-color: #ffff00;
+            box-shadow: 0 0 8px #ff1493;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border: 3px outset #ffb6c1;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-50px) scale(1.02);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 20, 147, 0.3);
+            border-color: #ff1493;
+        }
+
+        .project-thumb {
+            height: 140px;
+            background: linear-gradient(135deg, #ffc0cb, #e6e6fa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: #ff1493;
+            position: relative;
+            border-bottom: 2px dashed #ffb6c1;
+        }
+
+        .project-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-tag {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #ffff00;
+            color: #000;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 10px;
+            border: 1px solid #000;
+        }
+
+        .project-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .project-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.9rem;
+            color: #ff1493;
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            font-size: 0.88rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .tech-badge {
+            background: #ffe4e1;
+            color: #c71585;
+            font-size: 0.72rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid #ffb6c1;
+            font-weight: 600;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-card {
+            flex: 1;
+            text-align: center;
+            padding: 6px;
+            font-size: 0.8rem;
+            border-radius: 6px;
+        }
+
+        /* Y2K Floating Stickers */
+        .sticker {
+            position: fixed;
+            pointer-events: none;
+            z-index: 99;
+            filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.2));
+            animation: float 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        /* Bottom Y2K Taskbar / Music Player Mock */
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 42px;
+            background: linear-gradient(180deg, #ffb6c1 0%, #ff69b4 100%);
+            border-top: 3px outset #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+
+        .start-btn {
+            background: linear-gradient(180deg, #ffffff 0%, #ffe4e1 100%);
+            border: 2px outset #ffffff;
+            padding: 4px 12px;
+            font-weight: bold;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.7rem;
+            color: #ff1493;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .start-btn:active {
+            border-style: inset;
+        }
+
+        .taskbar-status {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'VT323', monospace;
+            font-size: 1.1rem;
+            color: #ffffff;
+            text-shadow: 1px 1px 1px #8b008b;
+        }
+
+        .status-clock {
+            background: rgba(0, 0, 0, 0.15);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px inset #fff;
+        }
+
+        /* Music Widget inside taskbar */
+        .music-widget {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            padding: 3px 10px;
+            border-radius: 15px;
+            border: 1px solid #ff1493;
+            font-size: 0.8rem;
+            color: #c71585;
+        }
+
+        .music-widget i {
+            color: #ff1493;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* Guestbook Section */
+        .guestbook-input {
+            width: 100%;
+            padding: 8px;
+            border: 2px inset #ffb6c1;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            font-family: inherit;
+        }
+
+        /* Sparkle animation effect */
+        .sparkle {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: radial-gradient(circle, #fff 20%, transparent 70%);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: sparkleAnim 1.5s infinite ease-in-out;
+        }
+
+        @keyframes sparkleAnim {
+            0%, 100% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Y2K Decorative Floating Stickers -->
+    <div class="sticker" style="top: 50px; left: 20px; font-size: 2rem;">💖</div>
+    <div class="sticker" style="top: 250px; right: 25px; font-size: 2.5rem; animation-delay: 1s;">✨</div>
+    <div class="sticker" style="bottom: 80px; left: 30px; font-size: 2.2rem; animation-delay: 1.5s;">💿</div>
+
+    <!-- Top Running Marquee Banner -->
+    <div class="top-banner">
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            ✦ BIENVENID2 AL REPOSITO23 DE GABSS555 ✦ EXPLORA MIS PROYECTOS ✦ CODIGO Y2K & CREATIVIDAD DIGITAL ✦ SYSTEM STATUS: ONLINE & READY ✦ NO OLVIDES DEJAR UN STAR ⭐ ✦
+        </marquee>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- LEFT SIDEBAR: PROFILE & INFO -->
+        <aside>
+            <div class="y2k-window">
+                <div class="window-titlebar">
+                    <span><i class="fa-solid fa-user-astronaut"></i> Profile.exe</span>
+                    <div class="window-controls">
+                        <div class="win-btn">_</div>
+                        <div class="win-btn">X</div>
+                    </div>
+                </div>
+                <div class="window-body profile-card">
+                    <div class="avatar-container">
+                        <img src="https://github.com/gabss555.png" alt="gabss555 avatar" class="avatar-img" onerror="this.src='https://placehold.co/140x140/ff69b4/ffffff?text=gabss555'">
+                        <span class="avatar-badge">ONLINE</span>
+                    </div>
+
+                    <h1 class="username">@gabss555</h1>
+                    
+                    <div class="bio-tag">
+                        🌸 Hola soy Gabi bienvenid@ a mi repositorio ✨
+                    </div>
+
+                    <div class="stats-box">
+                        <div class="stat-item">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <span id="repo-count">Repos</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fa-solid fa-star"></i>
+                            <span>Y2K Vibe</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/gabss555" target="_blank" class="btn-y2k">
+                            <i class="fa-brands fa-github"></i> Visitar GitHub
+                        </a>
+                        <button onclick="copyRepoURL()" class="btn-y2k" style="background: linear-gradient(180deg, #9933ff 0%, #ff1493 100%);">
+                            <i class="fa-solid fa-share-nodes"></i> Copiar Link
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mini Winamp / Audio Player Mock -->
+            <div class="y2k-window">
+                <div class="window-titlebar">
+                    <span><i class="fa-solid fa-compact-disc"></i> Player_Y2K.exe</span>
+                    <div class="window-controls">
+                        <div class="win-btn">X</div>
+                    </div>
+                </div>
+                <div class="window-body" style="text-align: center; font-size: 0.85rem;">
+                    <div style="background: #000; color: #ff66cc; font-family: 'VT323'; padding: 6px; border-radius: 4px; margin-bottom: 10px; border: 1px solid #ff1493;">
+                        ♫ Wonder Girls - Tell Me 💖
+                    </div>
+                    <!-- Audio element playing Wonder Girls - Tell Me preview -->
+                    <audio id="bg-music" loop preload="auto" src="https://cdns-preview-d.dzcdn.net/stream/c-d653a9926868e20aa025a1f6a1529ea4-3.mp3"></audio>
+                    <div style="display: flex; justify-content: center; gap: 8px;">
+                        <button class="win-btn" style="width: 35px; height: 25px;" onclick="togglePlay()"><i id="play-icon" class="fa-solid fa-play"></i></button>
+                        <button class="win-btn" style="width: 35px; height: 25px;" onclick="restartMusic()"><i class="fa-solid fa-backward-step"></i></button>
+                        <button class="win-btn" style="width: 35px; height: 25px;" onclick="triggerSparkles()"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- RIGHT CONTENT: PROJECTS PORTFOLIO -->
+        <main>
+            <div class="main-header">
+                <h2 class="glitch-title">WELCOME TO MY WORLD</h2>
+                <p style="font-size: 1.1rem; color: #8b008b; font-weight: 600;">Explora los repositorios y proyectos alojados en mi cuenta de GitHub 💖</p>
+            </div>
+
+            <!-- Categories / Filter Pills -->
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterProjects('all')">✨ Todos</button>
+                <button class="filter-btn" onclick="filterProjects('star')">⭐ Con Estrellas</button>
+                <button class="filter-btn" onclick="filterProjects('fork')">🍴 Forks</button>
+            </div>
+
+            <!-- Projects Grid (Populated dynamically from GitHub API) -->
+            <div class="projects-grid" id="projects-container">
+                <div style="grid-column: 1/-1; text-align: center; padding: 30px; font-family: 'Press Start 2P'; font-size: 0.8rem; color: #ff1493;">
+                    <i class="fa-solid fa-spinner fa-spin" style="font-size: 1.5rem; margin-bottom: 10px; display: block;"></i>
+                    Cargando tus proyectos reales de GitHub...
+                </div>
+            </div>
+
+            <!-- Guestbook / Interactive Window -->
+            <div class="y2k-window" style="margin-top: 30px;">
+                <div class="window-titlebar">
+                    <span><i class="fa-solid fa-pen-to-square"></i> Leave_a_Message.txt</span>
+                    <div class="window-controls">
+                        <div class="win-btn">_</div>
+                        <div class="win-btn">X</div>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p style="font-weight: bold; margin-bottom: 8px; color: #c71585;">¡Deja una nota rápida o saludo temporal!</p>
+                    <input type="text" id="noteInput" class="guestbook-input" placeholder="Escribe algo bonito aquí...">
+                    <button onclick="addNote()" class="btn-y2k" style="font-size: 0.85rem; padding: 6px 15px;">
+                        <i class="fa-solid fa-heart"></i> Publicar Nota
+                    </button>
+                    
+                    <div id="notesContainer" style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="tech-badge" style="background: #ffff00; color:#000;">💖 ¡Gracias por visitar!</span>
+                        <span class="tech-badge" style="background: #00ffff; color:#000;">✨ ¡Me encanta la vibra Y2K!</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bottom Y2K Taskbar -->
+    <div class="taskbar">
+        <button class="start-btn" onclick="alert('🌸 gabss555 World v1.0 🌸\n¡Gracias por explorar mi repositorio!')">
+            <i class="fa-solid fa-heart"></i> Inicio
+        </button>
+
+        <div class="music-widget">
+            <i class="fa-solid fa-disc-drive"></i>
+            <span id="now-playing">Playing: Wonder Girls - Tell Me</span>
+        </div>
+
+        <div class="taskbar-status">
+            <span id="clock" class="status-clock">12:00 AM</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Vanilla (No Frameworks) -->
+    <script>
+        // Reloj de la barra de tareas
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById('clock').innerText = hours + ':' + minutes + ' ' + ampm;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Reproductor de música instantáneo para Wonder Girls - Tell Me
+        const music = document.getElementById('bg-music');
+        let isPlaying = false;
+
+        function togglePlay() {
+            const icon = document.getElementById('play-icon');
+            if (isPlaying) {
+                music.pause();
+                icon.className = 'fa-solid fa-play';
+                isPlaying = false;
+            } else {
+                // Forzar reproducción inmediata al toque/click
+                const playPromise = music.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        icon.className = 'fa-solid fa-pause';
+                        isPlaying = true;
+                    }).catch(error => {
+                        console.log("Play error: ", error);
+                    });
+                }
+            }
+        }
+
+        function restartMusic() {
+            music.currentTime = 0;
+            if (!isPlaying) togglePlay();
+        }
+
+        // Intento opcional de reproducción automática al primer clic en cualquier parte de la página
+        document.body.addEventListener('click', function startAudioOnFirstInteraction() {
+            if (!isPlaying) {
+                music.play().then(() => {
+                    document.getElementById('play-icon').className = 'fa-solid fa-pause';
+                    isPlaying = true;
+                }).catch(() => {});
+            }
+            document.body.removeEventListener('click', startAudioOnFirstInteraction);
+        }, { once: true });
+
+        // Copiar URL del repositorio
+        function copyRepoURL() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = 'https://github.com/gabss555';
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            alert('✨ ¡Enlace copiado al portapapeles!');
+        }
+
+        // Añadir nota al libro de visitas
+        function addNote() {
+            const input = document.getElementById('noteInput');
+            const container = document.getElementById('notesContainer');
+            if (input.value.trim() !== '') {
+                const note = document.createElement('span');
+                note.className = 'tech-badge';
+                note.style.background = '#ff69b4';
+                note.style.color = '#ffffff';
+                note.innerText = '🌸 ' + input.value;
+                container.appendChild(note);
+                input.value = '';
+            }
+        }
+
+        // Generar destellos Y2K
+        function triggerSparkles() {
+            for (let i = 0; i < 8; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * window.innerWidth + 'px';
+                sparkle.style.top = Math.random() * window.innerHeight + 'px';
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 1500);
+            }
+        }
+
+        // Filtro de proyectos
+        function filterProjects(filterType) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (filterType === 'all') {
+                    card.style.display = 'flex';
+                } else if (filterType === 'star') {
+                    const stars = parseInt(card.getAttribute('data-stars') || '0');
+                    card.style.display = stars > 0 ? 'flex' : 'none';
+                } else if (filterType === 'fork') {
+                    const isFork = card.getAttribute('data-fork') === 'true';
+                    card.style.display = isFork ? 'flex' : 'none';
+                }
+            });
+        }
+
+        // Cargar repositorios reales desde la API de GitHub de @gabss555
+        async function fetchGitHubData() {
+            try {
+                // Obtener datos del usuario
+                const userRes = await fetch('https://api.github.com/users/gabss555');
+                if (userRes.ok) {
+                    const userData = await userRes.json();
+                    document.getElementById('repo-count').innerText = (userData.public_repos || 0) + ' Repos';
+                }
+
+                // Obtener repositorios del usuario
+                const reposRes = await fetch('https://api.github.com/users/gabss555/repos?sort=updated&per_page=30');
+                const container = document.getElementById('projects-container');
+
+                if (reposRes.ok) {
+                    const repos = await reposRes.json();
+                    container.innerHTML = '';
+
+                    if (repos.length === 0) {
+                        container.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">No se encontraron repositorios públicos aún.</p>';
+                        return;
+                    }
+
+                    // Iconos según el lenguaje principal
+                    const langIcons = {
+                        'JavaScript': 'fa-brands fa-js',
+                        'HTML': 'fa-brands fa-html5',
+                        'CSS': 'fa-brands fa-css3-alt',
+                        'Python': 'fa-brands fa-python',
+                        'TypeScript': 'fa-code',
+                        'PHP': 'fa-brands fa-php',
+                        'Java': 'fa-brands fa-java'
+                    };
+
+                    repos.forEach(repo => {
+                        const iconClass = langIcons[repo.language] || 'fa-solid fa-code';
+                        const desc = repo.description || 'Repositorio oficial de @gabss555 en GitHub.';
+                        const stars = repo.stargazers_count || 0;
+                        const forks = repo.forks_count || 0;
+
+                        const cardHTML = `
+                            <div class="project-card" data-stars="${stars}" data-fork="${repo.fork}">
+                                <div class="project-thumb">
+                                    <i class="${iconClass}"></i>
+                                    <span class="project-tag">${repo.language || 'Código'}</span>
+                                </div>
+                                <div class="project-content">
+                                    <h3 class="project-title">${repo.name}</h3>
+                                    <p class="project-desc">${desc}</p>
+                                    <div class="tech-stack">
+                                        <span class="tech-badge"><i class="fa-solid fa-star"></i> ${stars}</span>
+                                        <span class="tech-badge"><i class="fa-solid fa-code-fork"></i> ${forks}</span>
+                                        ${repo.homepage ? '<span class="tech-badge" style="background:#00ffff; color:#000;">Live Demo</span>' : ''}
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="${repo.html_url}" target="_blank" class="btn-y2k btn-card"><i class="fa-brands fa-github"></i> Ver Repo</a>
+                                        ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" class="btn-y2k btn-card" style="background: linear-gradient(180deg, #9933ff 0%, #ff1493 100%);"><i class="fa-solid fa-eye"></i> Demo</a>` : ''}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        container.insertAdjacentHTML('beforeend', cardHTML);
+                    });
+                } else {
+                    throw new Error('No se pudieron cargar los repositorios');
+                }
+            } catch (err) {
+                console.error(err);
+                document.getElementById('projects-container').innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; color: #c71585;">
+                        <p>💖 Visita directamente los proyectos en GitHub:</p>
+                        <a href="https://github.com/gabss555?tab=repositories" target="_blank" class="btn-y2k" style="display:inline-flex; margin-top:10px;">Ver Repositorios de @gabss555</a>
+                    </div>
+                `;
+            }
+        }
+
+        // Ejecutar carga de datos al iniciar
+        fetchGitHubData();
+    </script>
+</body>
+</html>
